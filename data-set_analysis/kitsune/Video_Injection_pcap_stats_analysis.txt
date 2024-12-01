@@ -1,0 +1,50 @@
+=== Network Traffic Analysis Report ===
+
+1. Top 5 Source Ethernet Addresses (with IP if available):
+00:a0:de:f1:88:6e (IP: 0, 192.168.100.5, 192.168.2.1)
+30:85:a9:14:53:9f (IP: 0, 192.168.2.20, 192.168.2.13)
+10:4f:a8:70:22:7e (IP: 192.168.2.13, 0)
+ac:9b:0a:33:a5:95 (IP: 192.168.2.11, 0)
+10:4f:a8:7e:7d:b5 (IP: 192.168.2.12, 0)
+
+2. Top 5 Destination Ethernet Addresses (with IP if available):
+00:a0:de:f1:88:6e (IP: 192.168.100.5, 0, 192.168.2.1, 132.72.140.46, 132.72.140.45)
+01:00:5e:7f:ff:fa (IP: 239.255.255.250)
+ff:ff:ff:ff:ff:ff (IP: 255.255.255.255, 0)
+10:4f:a8:70:22:7e (IP: 192.168.2.13, 0)
+30:85:a9:14:53:9f (IP: 0, 192.168.2.20, 192.168.2.13)
+
+3. Traffic Distribution by Protocol:
+TCP Traffic: 0.01%
+UDP Traffic: 99.71%
+ICMP Traffic: 0.17%
+
+4. Top 5 Most Frequent Flows (Ethernet Addresses):
+          eth.src           eth.dst  Frequency
+ac:9b:0a:33:a5:95 00:a0:de:f1:88:6e 389.032993
+10:4f:a8:70:22:7e 00:a0:de:f1:88:6e 345.090406
+30:85:a9:14:53:9f 00:a0:de:f1:88:6e 296.624799
+10:4f:a8:7e:7d:b5 00:a0:de:f1:88:6e 194.606385
+ac:9b:0a:fc:2a:73 00:a0:de:f1:88:6e 193.816984
+
+5. Potential Anomalous Traffic (Frequency above 95%):
+          eth.src           eth.dst  Frequency  Total
+ac:9b:0a:33:a5:95 00:a0:de:f1:88:6e 389.032993 826715
+10:4f:a8:70:22:7e 00:a0:de:f1:88:6e 345.090406 733325
+
+6. ARP Traffic per Ethernet Source:
+eth.src
+00:a0:de:f1:88:6e    299
+10:4f:a8:70:22:7e     57
+10:4f:a8:7e:7d:b5     41
+30:85:a9:14:53:9f    159
+48:7a:da:b2:0d:ff      2
+ac:9b:0a:33:a5:95     65
+ac:9b:0a:fc:2a:73     51
+b8:27:eb:e1:a9:f6    134
+
+Warning: Detected abnormal ARP traffic from the following sources (more than 100 ARP packets):
+eth.src
+00:a0:de:f1:88:6e    299
+30:85:a9:14:53:9f    159
+b8:27:eb:e1:a9:f6    134

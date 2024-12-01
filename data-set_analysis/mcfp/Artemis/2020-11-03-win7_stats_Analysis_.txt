@@ -1,0 +1,50 @@
+=== Network Traffic Analysis Report ===
+
+1. Top 5 Source Ethernet Addresses (with IP if available):
+08:00:27:0a:a9:9c (IP: 0, 192.168.1.117)
+08:00:27:7c:99:f8 (IP: 0)
+d8:58:d7:00:0f:72 (IP: 0, 0.0.0.0)
+1c:6f:65:c0:43:92 (IP: 0, 192.168.1.2)
+0 (IP: 0)
+
+2. Top 5 Destination Ethernet Addresses (with IP if available):
+1c:6f:65:c0:43:92 (IP: 195.113.232.73, 204.11.56.48, 195.113.232.74, 0)
+ff:ff:ff:ff:ff:ff (IP: 0, 192.168.1.255)
+08:00:27:0a:a9:9c (IP: 0)
+33:33:ff:00:04:f7 (IP: 0)
+33:33:00:00:00:02 (IP: 0)
+
+3. Traffic Distribution by Protocol:
+TCP Traffic: 3.48%
+UDP Traffic: 2.79%
+ICMP Traffic: 0.00%
+
+4. Top 5 Most Frequent Flows (Ethernet Addresses):
+          eth.src           eth.dst     Frequency
+08:00:27:7c:99:f8 33:33:00:01:00:02 142857.142928
+08:00:27:7c:99:f8 ff:ff:ff:ff:ff:ff  76470.588230
+08:00:27:7c:99:f8 33:33:ff:60:e3:aa  75000.000003
+08:00:27:7c:99:f8 33:33:00:00:00:02  37313.432835
+                0                 0      1.000000
+
+5. Potential Anomalous Traffic (Frequency above 95%):
+          eth.src           eth.dst     Frequency  Total
+08:00:27:7c:99:f8 ff:ff:ff:ff:ff:ff  76470.588230     13
+08:00:27:7c:99:f8 33:33:00:01:00:02 142857.142928      3
+
+6. ARP Traffic per Ethernet Source:
+eth.src
+08:00:27:0a:a9:9c      9
+08:00:27:7c:99:f8     13
+1c:6f:65:c0:43:92      6
+d8:58:d7:00:0f:72    126
+
+Warning: Detected abnormal ARP traffic from the following sources (more than 100 ARP packets):
+eth.src
+d8:58:d7:00:0f:72    126
+
+7. Time cost.
+
+TSV processing time: 0.5429296493530273s.
+
+Analysis time: 0.05881977081298828s.

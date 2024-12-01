@@ -1,0 +1,65 @@
+=== Network Traffic Analysis Report ===
+
+1. Top 5 Source Ethernet Addresses (with IP if available):
+08:00:27:82:ad:f3 (IP: 0, 192.168.1.120)
+08:00:27:bc:b9:3d (IP: 0, 192.168.1.124)
+08:00:27:12:45:de (IP: 0, 192.168.1.122)
+08:00:27:44:99:65 (IP: 0, 192.168.1.125)
+08:00:27:5e:a3:27 (IP: 0)
+
+2. Top 5 Destination Ethernet Addresses (with IP if available):
+ff:ff:ff:ff:ff:ff (IP: 0, 192.168.1.255, 255.255.255.255)
+33:33:00:00:00:01 (IP: 0)
+33:33:00:01:00:02 (IP: 0)
+33:33:ff:00:0f:72 (IP: 0)
+08:00:27:82:ad:f3 (IP: 0, 192.168.1.120)
+
+3. Traffic Distribution by Protocol:
+TCP Traffic: 72.32%
+UDP Traffic: 0.05%
+ICMP Traffic: 0.00%
+
+4. Top 5 Most Frequent Flows (Ethernet Addresses):
+          eth.src           eth.dst   Frequency
+f4:f5:d8:45:9f:1a ff:ff:ff:ff:ff:ff 1084.010841
+80:19:34:17:97:60 33:33:00:00:00:01  633.111744
+08:00:27:06:dd:af 33:33:00:00:00:01  534.568781
+80:19:34:17:97:60 ff:ff:ff:ff:ff:ff  269.215237
+08:00:27:06:dd:af ff:ff:ff:ff:ff:ff  172.696658
+
+5. Potential Anomalous Traffic (Frequency above 95%):
+          eth.src           eth.dst   Frequency  Total
+08:00:27:12:45:de 33:33:00:01:00:03   20.728181      2
+08:00:27:44:99:65 33:33:00:01:00:03   21.202612      2
+08:00:27:44:99:65 01:00:5e:00:00:fc   21.225339      2
+08:00:27:82:ad:f3 33:33:ff:00:04:f7   24.144286      3
+f4:f5:d8:45:9f:1a ff:ff:ff:ff:ff:ff 1084.010841      2
+80:19:34:17:97:60 ff:ff:ff:ff:ff:ff  269.215237      2
+80:19:34:17:97:60 33:33:00:00:00:01  633.111744      4
+08:00:27:06:dd:af ff:ff:ff:ff:ff:ff  172.696658      2
+08:00:27:06:dd:af 33:33:00:00:00:01  534.568781      6
+
+6. ARP Traffic per Ethernet Source:
+eth.src
+08:00:27:0a:a9:9c    12
+08:00:27:12:45:de    24
+08:00:27:44:99:65    22
+08:00:27:53:c0:11     6
+08:00:27:5d:86:c6    37
+08:00:27:5e:a3:27    24
+08:00:27:7e:74:80    19
+08:00:27:82:ad:f3    44
+08:00:27:bc:b9:3d    71
+08:00:27:c3:f9:98     7
+08:00:27:e1:e3:8a     9
+1c:6f:65:c0:43:92    33
+d8:58:d7:00:0f:72    13
+f4:f5:d8:45:9f:1a    33
+
+ARP traffic is normal.
+
+7. Time cost.
+
+TSV processing time: 17.224894523620605s.
+
+Analysis time: 19.309296369552612s.

@@ -1,0 +1,46 @@
+=== Network Traffic Analysis Report ===
+
+1. Top 5 Source Ethernet Addresses (with IP if available):
+08:00:27:bc:b9:3d (IP: 0, 192.168.1.124)
+1c:6f:65:c0:43:92 (IP: 0, 23.23.102.58, 193.0.140.177, 37.59.158.241, 194.87.234.99, 76.8.104.213, 194.87.102.6, 192.168.1.2, 212.24.110.154, 89.231.13.24, 89.231.13.18, 196.11.84.62, 185.86.150.185, 89.231.13.27, 212.24.110.190, 195.2.252.152, 147.135.144.28, 195.133.144.138, 68.191.80.115, 5.45.64.113, 89.231.13.33)
+d8:58:d7:00:0f:72 (IP: 0, 192.168.1.1)
+
+2. Top 5 Destination Ethernet Addresses (with IP if available):
+08:00:27:bc:b9:3d (IP: 0, 192.168.1.124)
+1c:6f:65:c0:43:92 (IP: 23.23.102.58, 193.0.140.177, 37.59.158.241, 0, 194.87.234.99, 76.8.104.213, 194.87.102.6, 176.121.213.31, 212.24.110.154, 89.231.13.24, 89.231.13.18, 196.11.84.62, 185.86.150.185, 89.231.13.27, 212.24.110.190, 195.2.252.152, 147.135.144.28, 195.133.144.138, 68.191.80.115, 5.45.64.113, 89.231.13.33)
+d8:58:d7:00:0f:72 (IP: 0, 176.121.213.31, 185.86.150.185, 196.11.84.62, 192.168.1.1, 195.133.144.138)
+
+3. Traffic Distribution by Protocol:
+TCP Traffic: 90.89%
+UDP Traffic: 0.00%
+ICMP Traffic: 0.21%
+
+4. Top 5 Most Frequent Flows (Ethernet Addresses):
+          eth.src           eth.dst  Frequency
+1c:6f:65:c0:43:92 08:00:27:bc:b9:3d   2.707116
+08:00:27:bc:b9:3d d8:58:d7:00:0f:72   1.000000
+08:00:27:bc:b9:3d d8:58:d7:00:0f:72   1.000000
+08:00:27:bc:b9:3d d8:58:d7:00:0f:72   1.000000
+d8:58:d7:00:0f:72 08:00:27:bc:b9:3d   1.000000
+
+5. Potential Anomalous Traffic (Frequency above 95%):
+          eth.src           eth.dst  Frequency  Total
+1c:6f:65:c0:43:92 08:00:27:bc:b9:3d   2.707116      4
+
+6. ARP Traffic per Ethernet Source:
+eth.src
+08:00:27:bc:b9:3d    4381
+1c:6f:65:c0:43:92    9413
+d8:58:d7:00:0f:72     309
+
+Warning: Detected abnormal ARP traffic from the following sources (more than 100 ARP packets):
+eth.src
+08:00:27:bc:b9:3d    4381
+1c:6f:65:c0:43:92    9413
+d8:58:d7:00:0f:72     309
+
+7. Time cost.
+
+TSV processing time: 5.633909225463867s.
+
+Analysis time: 8.065230369567871s.

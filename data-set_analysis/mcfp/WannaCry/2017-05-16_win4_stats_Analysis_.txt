@@ -1,0 +1,40 @@
+=== Network Traffic Analysis Report ===
+
+1. Top 5 Source Ethernet Addresses (with IP if available):
+08:00:27:52:f4:11 (IP: 0, 192.168.1.114)
+1c:6f:65:c0:43:92 (IP: 0, 195.113.232.89, 195.113.232.73, 207.154.243.152)
+d8:58:d7:00:0f:72 (IP: 0, 8.8.8.8)
+
+2. Top 5 Destination Ethernet Addresses (with IP if available):
+08:00:27:52:f4:11 (IP: 0, 192.168.1.114)
+1c:6f:65:c0:43:92 (IP: 8.8.8.8, 195.113.232.89, 195.113.232.73, 207.154.243.152)
+d8:58:d7:00:0f:72 (IP: 0)
+
+3. Traffic Distribution by Protocol:
+TCP Traffic: 17.86%
+UDP Traffic: 4.76%
+ICMP Traffic: 0.00%
+
+4. Top 5 Most Frequent Flows (Ethernet Addresses):
+          eth.src           eth.dst  Frequency
+d8:58:d7:00:0f:72 08:00:27:52:f4:11 674.877678
+08:00:27:52:f4:11 1c:6f:65:c0:43:92  94.095507
+08:00:27:52:f4:11 1c:6f:65:c0:43:92   3.007058
+1c:6f:65:c0:43:92 08:00:27:52:f4:11   3.007012
+08:00:27:52:f4:11 1c:6f:65:c0:43:92   2.996991
+
+5. Potential Anomalous Traffic (Frequency above 95%):
+          eth.src           eth.dst  Frequency  Total
+d8:58:d7:00:0f:72 08:00:27:52:f4:11 674.877678      4
+
+6. ARP Traffic per Ethernet Source:
+eth.src
+08:00:27:52:f4:11     1
+1c:6f:65:c0:43:92    46
+d8:58:d7:00:0f:72     1
+
+ARP traffic is normal.
+
+7. Time cost.
+
+Analysis time: 0.013634443283081055s.
